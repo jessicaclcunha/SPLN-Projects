@@ -1,0 +1,578 @@
+{
+    "A": {
+        "Acicatura": {
+            "definicao": "Uma nota de graça que aparece como uma nota pequena com uma barra atravessando a haste. O MuseScore cria uma reprodução rápida; a duração da reprodução não é afetada pela duração da nota mãe.",
+            "variante": null,
+            "musescore_especifico": false
+        },
+        "Acidente": {
+            "definicao": "Um acidente é um sinal que aparece à frente de uma nota e eleva ou abaixa sua altura. Veja Inserindo notas e pausas:Acidentes. O MuseScore cria reprodução apenas para acidentes comuns, incluindo sustenidos, bemóis, naturais, dobros sustenidos, dobros bemóis e bemóis triplos. Para criar acidentes microtonais como o quarto de tom, veja Sistemas de afinação, notação microtonal e reprodução.",
+            "variante": null,
+            "musescore_especifico": false
+        },
+        "Ambitus": {
+            "definicao": "Extensão de notas (ou vocais) usada em uma pauta. Usada particularmente na música antiga. Veja o capítulo Ambitus.",
+            "variante": null,
+            "musescore_especifico": false
+        },
+        "Anacruse": {
+            "definicao": "Veja compasso de pickup.",
+            "variante": "BE",
+            "musescore_especifico": false
+        },
+        "Âncora": {
+            "definicao": "O ponto de ancoragem ao score de objetos como Texto e Linhas: quando o objeto é arrastado, a âncora aparece como um pequeno círculo marrom conectado ao objeto por uma linha pontilhada. Dependendo do objeto selecionado, a âncora pode estar ligada a (a) uma nota (ex.: digitação), (b) uma linha de pauta (ex.: texto da pauta), ou (c) uma barra de compasso (ex.: repetições).",
+            "variante": null,
+            "musescore_especifico": false
+        },
+        "Apojatura": {
+            "definicao": "Uma longa nota de graça que recebe valor da nota associada. O MuseScore cria reprodução como tal. É aceitável executar a appogiatura escrita como acciaccatura hoje, mas o MuseScore não cria tal reprodução. As funções da appogiatura incluem: nota de passagem, antecipação, suspensão batida e nota de escape.",
+            "variante": null,
+            "musescore_especifico": false
+        },
+        "Arpejo": {
+            "definicao": "An arpeggio tells the performer to break up the chord into the constituent notes, playing them separately and one after the other. The arrow arpeggio symbol indicates the direction in which the player should play the notes of the chord. See Arpeggios and glissandi chapter.",
+            "variante": null,
+            "musescore_especifico": false
+        },
+        "Articulação": {
+            "definicao": "Uma marcação ou símbolo que indica como uma nota deve ser tocada, geralmente alterando a duração da nota ou modelando seu ataque e decaimento. Veja Articulação.",
+            "variante": null,
+            "musescore_especifico": false
+        }
+    },
+    "B": {
+        "Compasso": {
+            "definicao": "Veja compasso.",
+            "variante": "BE",
+            "musescore_especifico": false
+        },
+        "Barra de Compasso": {
+            "definicao": "Linha vertical que atravessa uma pauta, pautas ou um sistema completo, separando compassos. Veja Barline.",
+            "variante": null,
+            "musescore_especifico": false
+        },
+        "Barra de ligação": {
+            "definicao": "Notas com duração de uma colcheia ou menor possuem bandeirola ou uma haste agrupada (beam). As hastes são usadas para agrupar notas. Veja também Beam francês. Veja Beam.",
+            "variante": null,
+            "musescore_especifico": false
+        },
+        "PPM": {
+            "definicao": "Um BPM (batidas por minuto) que exibe apenas a unidade de tempo usada dentro da barra de ferramentas de reprodução do MuseScore. O BPM representa a quantidade de semínimas que ocorreriam em um minuto. Não é o número usado em marcadores de metrônomo em uma partitura. Veja Controles de reprodução.",
+            "variante": null,
+            "musescore_especifico": false
+        },
+        "Breve, ou Brevis": {
+            "definicao": "Uma nota de dupla semibreve ou breve tem a duração de duas semibreves.",
+            "variante": null,
+            "musescore_especifico": false
+        }
+    },
+    "C": {
+        "Cesura": {
+            "definicao": "Uma caesura (//) é uma pausa breve e silenciosa. O tempo não é contado durante esse período, e a música retoma quando o diretor sinaliza. Veja Respirações e pausas.",
+            "variante": null,
+            "musescore_especifico": false
+        },
+        "Capo (texto)": {
+            "definicao": "Um texto que indica a configuração do dispositivo transpositor usado em um instrumento. Veja Aplicando capos. Não confundir com Da capo (D.C.).",
+            "variante": null,
+            "musescore_especifico": false
+        },
+        "Cent": {
+            "definicao": "Um intervalo igual a um centésimo de um semitom, usado na propriedade de afinação de uma nota. Veja Painel de propriedades.",
+            "variante": null,
+            "musescore_especifico": false
+        },
+        "Acorde": {
+            "definicao": "1. Um grupo de duas ou mais notas que soam simultaneamente.",
+            "variante": null,
+            "musescore_especifico": false
+        },
+        "Clave": {
+            "definicao": "Um símbolo musical usado para indicar quais notas são representadas pelas linhas e espaços em uma →pauta. Veja Claves. Veja também clave de cortesia.",
+            "variante": null,
+            "musescore_especifico": false
+        },
+        "Coda": {
+            "definicao": "1. Uma passagem que traz uma peça (ou movimento) ao final.",
+            "variante": null,
+            "musescore_especifico": false
+        },
+        "Tom de concerto": {
+            "definicao": "1. A altura sonora (real) de uma nota — em contraste com a altura escrita. Veja Trabalhando com instrumentos transpositores.",
+            "variante": null,
+            "musescore_especifico": false
+        },
+        "Clave de cortesia": {
+            "definicao": "Uma clave de tamanho reduzido aplicada ao final de um sistema indicando mudança de clave no início do próximo sistema. Veja Claves.",
+            "variante": null,
+            "musescore_especifico": false
+        },
+        "Notação entre pautas": {
+            "definicao": "Uma frase musical que se estende por duas pautas vizinhas, por exemplo, a pauta de baixo e a de violino.",
+            "variante": null,
+            "musescore_especifico": false
+        },
+        "Semínima": {
+            "definicao": "Veja colcheia.",
+            "variante": "BE",
+            "musescore_especifico": false
+        }
+    },
+    "D": {
+        "Da capo (D.C.)": {
+            "definicao": "Uma diretriz para repetir a parte anterior da música. Veja Saltos e marcadores. Não confundir com capo (texto).",
+            "variante": null,
+            "musescore_especifico": false
+        },
+        "Nota morta": {
+            "definicao": "Veja nota fantasma.",
+            "variante": null,
+            "musescore_especifico": false
+        },
+        "Semi‑colcheia": {
+            "definicao": "Uma semi‑colcheia.",
+            "variante": "BE",
+            "musescore_especifico": false
+        },
+        "Dobrado bemol": {
+            "definicao": "Um bemol duplo (♭♭ ou 𝄫) indica que a altura de uma nota deve ser abaixada duas semitons.",
+            "variante": null,
+            "musescore_especifico": false
+        },
+        "Dobrado sustenido": {
+            "definicao": "Um sustenido duplo (♯♯ ou 𝄪) indica que a altura de uma nota deve ser elevada duas semitons.",
+            "variante": null,
+            "musescore_especifico": false
+        },
+        "Duína": {
+            "definicao": "Veja grupo de valores irregulares (tuplet).",
+            "variante": null,
+            "musescore_especifico": false
+        },
+        "Dinâmica, dinâmicas, símbolo de dinâmica, símbolos de dinâmica": {
+            "definicao": "A symbol indicating the relative loudness of a note or phrase of music—such as mf (mezzoforte), p (piano), f (forte) etc., starting at that note. See Dynamic chapter.",
+            "variante": null,
+            "musescore_especifico": false
+        }
+    },
+    "E": {
+        "Modo de edição, modo de edição de texto": {
+            "definicao": "Usado para editar a posição literal e o conteúdo de Texto, em contraste com o modo normal e o modo de inserção de notas. Veja Ajustando elementos diretamente e Inserindo e editando texto: Editando o conteúdo do objeto de texto.",
+            "variante": null,
+            "musescore_especifico": false
+        },
+        "Colcheia": {
+            "definicao": "Uma nota cuja duração é um oitavo de uma semibreve (whole note). Também conhecida como colcheia (BE).",
+            "variante": null,
+            "musescore_especifico": false
+        },
+        "Endecalineo": {
+            "definicao": "Endecalineo ou endecagrama, a pauta para Solfejo. Veja Solmisation (tutorial para o MuseScore 3, aguardando atualização).",
+            "variante": null,
+            "musescore_especifico": true
+        },
+        "Finalizações": {
+            "definicao": "Veja volta.",
+            "variante": null,
+            "musescore_especifico": false
+        },
+        "Notas enarmônicas": {
+            "definicao": "Notas que soam na mesma altura, mas são escritas de forma diferente. Exemplo: G♯ e A♭ são notas enarmônicas. Para mudar rapidamente entre grafias enarmônicas, pressione J. Veja Inserindo notas e pausas.",
+            "variante": null,
+            "musescore_especifico": false
+        },
+        "Explode": {
+            "definicao": "Um recurso que permite ao usuário dividir (ou explodir) os acordes em um trecho musical em uma única pauta em suas notas ou vozes constituintes. Veja Implodir e explodir. Veja também implode.",
+            "variante": null,
+            "musescore_especifico": true
+        }
+    },
+    "F": {
+        "Bandeirola": {
+            "definicao": "Veja barra de agrupamento (beam).",
+            "variante": null,
+            "musescore_especifico": false
+        },
+        "Bemol": {
+            "definicao": "Sinal (♭) que indica que a altura de uma nota deve ser abaixada um semitom, veja acidentes e armadura de clave.",
+            "variante": null,
+            "musescore_especifico": false
+        },
+        "French Beam": {
+            "definicao": "Barras onde as hastes só se estendem até a primeira barra, mas não intersectam toda a extensão. Para criar use o plugin Barras francesas.",
+            "variante": null,
+            "musescore_especifico": true
+        }
+    },
+    "G": {
+        "Nota fantasma": {
+            "definicao": "Na música, especialmente no jazz, uma nota fantasma (ou nota morta, abafada, silenciada ou falsa) é uma nota musical com valor rítmico, mas sem altura discernível quando tocada. O MuseScore oferece cabeças de nota cruzadas (cross notehead), cabeça de nota em diamante (pequena como no MuseScore 3), cabeça de nota barra/diamante (nova no MuseScore 4) e a adição de colchetes (parênteses) a uma nota, veja Cabeças de nota.",
+            "variante": null,
+            "musescore_especifico": false
+        },
+        "Nota de graça": {
+            "definicao": "Notas de graça aparecem como notas pequenas na frente de uma nota principal de tamanho normal. Veja acciaccatura e appoggiatura. Veja Nota de graça.",
+            "variante": null,
+            "musescore_especifico": false
+        }
+    },
+    "H": {
+        "Mínima": {
+            "definicao": "Uma nota cuja duração é metade de uma semibreve. Também conhecida como mínima (BE).",
+            "variante": null,
+            "musescore_especifico": false
+        },
+        "Semi‑fusa": {
+            "definicao": "Uma nota de sessenta e quatro avos.",
+            "variante": "BE",
+            "musescore_especifico": false
+        }
+    },
+    "I": {
+        "Implode": {
+            "definicao": "Um recurso que permite ao usuário combinar vozes de pautas separadas em uma única pauta. Veja Implodir e explodir. Isso é similar, mas não exatamente, à redução de partitura (wikipedia). Veja também explode.",
+            "variante": null,
+            "musescore_especifico": true
+        },
+        "intervalo": {
+            "definicao": "A diferença de altura entre duas notas, expressa em termos do grau da escala (ex.: segunda maior, terça menor, quinta justa etc.). Veja Degree (Music) (Wikipedia).",
+            "variante": null,
+            "musescore_especifico": false
+        },
+        "Interleaved": {
+            "definicao": "Um termo usado para descrever dois conjuntos de notas entrelaçados, opostamente embeamed. Para criar, use a função de voz e a paleta de barras. Veja Direções de barras intercaladas.",
+            "variante": null,
+            "musescore_especifico": true
+        },
+        "Instrumento": {
+            "definicao": "1. Instrumento MuseScore, veja Configurando sua partitura.",
+            "variante": null,
+            "musescore_especifico": false
+        },
+        "Irregular measure marker": {
+            "definicao": "Um sinal de mais ou menos no canto superior direito de um compasso indica que sua duração difere da estabelecida pela assinatura de tempo. Veja A interface do usuário e Propriedades de compasso.",
+            "variante": null,
+            "musescore_especifico": true
+        }
+    },
+    "J": {
+        "Salto": {
+            "definicao": "Objetos de salto são notações como \"D.S. al Coda\", encontrados na paleta \"Repetições & Saltos\". Veja Saltos e marcadores.",
+            "variante": null,
+            "musescore_especifico": false
+        }
+    },
+    "K": {
+        "Armadura de Clave": {
+            "definicao": "Conjunto de sinais de sustenido ou sinais de bemol no início das pentagramas. Indica a tonalidade e evita a repetição desses sinais ao longo do pentagrama. Uma armadura de clave com Si bemol indica tonalidade de Fá maior ou Ré menor. Consulte o capítulo Armadura de clave.",
+            "variante": null,
+            "musescore_especifico": false
+        }
+    },
+    "L": {
+        "Legato": {
+            "definicao": "Legato é um estilo de execução que consiste em tocar as notas de forma ligada. Legato pode ser escrito como texto ou indicado por meio do uso de ligaduras.",
+            "variante": null,
+            "musescore_especifico": false
+        },
+        "Armadura de compasso local": {
+            "definicao": "A armadura de compasso em um único pentagrama quando diferente da armadura de compasso geral da partitura. Veja Adicionar uma armadura de compasso local para um único pentagrama.",
+            "variante": null,
+            "musescore_especifico": false
+        },
+        "Longa": {
+            "definicao": "Um longa é uma nota inteira quádrupla.",
+            "variante": null,
+            "musescore_especifico": false
+        }
+    },
+    "M": {
+        "Compasso": {
+            "definicao": "Um segmento de tempo definido por um número determinado de tempos. Dividir a música em compassos fornece pontos de referência regulares para localizar trechos dentro de uma obra musical. Equivalente a compasso (BE).",
+            "variante": "AE",
+            "musescore_especifico": false
+        },
+        "Símbolo de repetição de compasso": {
+            "definicao": "A measure repeat sign looks like a \"percentage\" symbol having the two circles filled, or a slash with a dot at each side. See Measure and multi-measure repeats chapter.",
+            "variante": null,
+            "musescore_especifico": false
+        },
+        "Marca de metrônomo": {
+            "definicao": "Um tipo de indicação de andamento. Veja Marcações de andamento.",
+            "variante": null,
+            "musescore_especifico": false
+        },
+        "Mínima": {
+            "definicao": "Veja mínima.",
+            "variante": "BE",
+            "musescore_especifico": false
+        },
+        "Pausa multicompasso": {
+            "definicao": "See Measure rests and multimeasure rests chapter.",
+            "variante": null,
+            "musescore_especifico": false
+        }
+    },
+    "N": {
+        "Bequadro": {
+            "definicao": "Um bequadro (♯) é um símbolo que cancela uma alteração anterior nas notas da mesma altura, veja →acidentais e →armadura de clave.",
+            "variante": null,
+            "musescore_especifico": false
+        },
+        "Modo normal": {
+            "definicao": "O modo de operação do MuseScore fora do modo de entrada de notas ou do modo de edição: pressione Esc para acessá-lo. No Modo Normal você pode navegar pela partitura, selecionar e mover elementos, ajustar as propriedades do Inspetor e alterar as alturas das notas existentes.",
+            "variante": null,
+            "musescore_especifico": false
+        },
+        "Modo de inserção de notas": {
+            "definicao": "O modo do programa usado para inserir notação musical, em contraste com o modo normal e o modo de edição. Ative-o pressionando N ou clicando no ícone de caneta na barra de ferramentas de entrada de notas. Consulte o capítulo Inserindo notas e pausas.",
+            "variante": null,
+            "musescore_especifico": false
+        }
+    },
+    "O": {
+        "Sistema Operacional (SO)": {
+            "definicao": "Software subjacente que controla e gerencia o hardware e outros softwares em um computador. Sistemas operacionais populares são Microsoft Windows, macOS e GNU/Linux.",
+            "variante": null,
+            "musescore_especifico": false
+        },
+        "Ossia": {
+            "definicao": "Uma passagem alternativa que pode ser tocada no lugar da passagem original (do italiano \"alternativamente\", significando \"ou seja\"). Consulte o capítulo Ossia.",
+            "variante": null,
+            "musescore_especifico": true
+        }
+    },
+    "P": {
+        "Parte": {
+            "definicao": "1. Função automática de extração de pentagramas do MuseScore, veja Partes.",
+            "variante": null,
+            "musescore_especifico": false
+        },
+        "Compasso de impulso  ou Upbeat)": {
+            "definicao": "Compasso inicial incompleto de uma obra ou de uma seção da música. Consulte os capítulos Duração do compasso, Criar nova partitura: Compasso de impulso e Propriedades do compasso: Excluir da contagem de compassos. Pode ou não ser compensado no final da partitura ou seção.",
+            "variante": "AE",
+            "musescore_especifico": false
+        },
+        "Propriedades": {
+            "definicao": "1. Configurações de um objeto individual em uma partitura no MuseScore, em contraste com estilo (perfil).",
+            "variante": null,
+            "musescore_especifico": false
+        }
+    },
+    "Q": {
+        "Quartina": {
+            "definicao": "Veja tupla.",
+            "variante": null,
+            "musescore_especifico": false
+        },
+        "Semínima": {
+            "definicao": "Uma nota cuja duração é um quarto de uma nota inteira (semibreve). Equivalente a uma colcheia (BE).",
+            "variante": null,
+            "musescore_especifico": false
+        },
+        "Colcheia": {
+            "definicao": "Veja colcheia.",
+            "variante": "BE",
+            "musescore_especifico": false
+        },
+        "Quintina": {
+            "definicao": "Veja tupla.",
+            "variante": null,
+            "musescore_especifico": false
+        }
+    },
+    "R": {
+        "Renomear alturas": {
+            "definicao": "Altera o acidente usado em uma nota, mas mantém a altura da nota. Veja o capítulo Inserindo notas e pausas: Accidentais.",
+            "variante": null,
+            "musescore_especifico": false
+        },
+        "Pausa": {
+            "definicao": "Um símbolo musical que indica silêncio. Veja o capítulo Inserindo notas e pausas.",
+            "variante": null,
+            "musescore_especifico": false
+        },
+        "Modo Redefinir Altura": {
+            "definicao": "Um dos modos de inserção de notas. Métodos alternativos de inserção de notas: Modo Redefinir Altura",
+            "variante": null,
+            "musescore_especifico": false
+        }
+    },
+    "S": {
+        "Partitura": {
+            "definicao": "1. Nos fóruns de suporte do MuseScore e no Manual do MuseScore, partitura geralmente se refere a um arquivo de computador com a extensão .mscz – e à sua representação visual na tela do computador, bem como à reprodução de áudio.",
+            "variante": null,
+            "musescore_especifico": false
+        },
+        "Seção": {
+            "definicao": "No MuseScore, uma região da partitura entre quebras de seção; também do início da partitura até a primeira quebra de seção, e da última quebra de seção até o final da partitura.",
+            "variante": null,
+            "musescore_especifico": false
+        },
+        "Segno": {
+            "definicao": "Um marcador de navegação. Consulte o capítulo Saltos e marcadores.",
+            "variante": null,
+            "musescore_especifico": false
+        },
+        "Semibreve": {
+            "definicao": "Uma nota inteira (AE). Dura um compasso inteiro em tempo 4/4.",
+            "variante": "BE",
+            "musescore_especifico": false
+        },
+        "Semicolcheia": {
+            "definicao": "Uma semicolcheia.",
+            "variante": "BE",
+            "musescore_especifico": false
+        },
+        "Semihemidemisemicolcheia": {
+            "definicao": "Uma nota de cento e vinte e oito avos.",
+            "variante": "BE",
+            "musescore_especifico": false
+        },
+        "Sextina": {
+            "definicao": "Veja tupla.",
+            "variante": null,
+            "musescore_especifico": false
+        },
+        "SF2": {
+            "definicao": "Um formato de instrumento virtual desenvolvido pela E-mu Systems e Creative Labs. Veja SoundFonts.",
+            "variante": null,
+            "musescore_especifico": false
+        },
+        "SF3": {
+            "definicao": "Uma invenção de Werner Schweer, desenvolvedor do MuseScore (fonte). Este formato suporta compressão de amostras de som. Veja SoundFonts.",
+            "variante": null,
+            "musescore_especifico": false
+        },
+        "Cabeça de nota compartilhada": {
+            "definicao": "Uma única cabeça de nota com duas hastes—uma para cima, outra para baixo. Muito comum em música para guitarra, por exemplo. Consulte Cabeças de nota.",
+            "variante": null,
+            "musescore_especifico": false
+        },
+        "Sustenido": {
+            "definicao": "Sinal (♯) que indica que a altura de uma nota deve ser aumentada em um semitom, veja acidentais e armadura de clave.",
+            "variante": null,
+            "musescore_especifico": false
+        },
+        "Barra (acorde slash, cabeça de nota slash)": {
+            "definicao": "Indica rasgueado. Veja acorde slash (Wikipedia).",
+            "variante": null,
+            "musescore_especifico": false
+        },
+        "Notação slash": {
+            "definicao": "Uma forma de notação musical que utiliza marcas de barra colocadas no pentagrama ou acima/abaixo dele para indicar o ritmo de um acompanhamento: frequentemente encontrada em associação com símbolos de acordes. Existem dois tipos: (1) Notação slash consiste em uma barra rítmica em cada tempo: a interpretação exata fica a cargo do intérprete (veja Preencher com barras); (2) Notação de barra rítmica indica o ritmo preciso para o acompanhamento (veja Alternar notação de barra rítmica).",
+            "variante": null,
+            "musescore_especifico": false
+        },
+        "Legato": {
+            "definicao": "A curved line over or under two or more notes, meaning that the notes will be played smooth and connected (legato). See Slur chapter. A slur is not a tie.",
+            "variante": null,
+            "musescore_especifico": false
+        },
+        "Solfejo": {
+            "definicao": "veja Endecalineo",
+            "variante": null,
+            "musescore_especifico": false
+        },
+        "SoundFont": {
+            "definicao": "Um formato de instrumento virtual suportado pelo MuseScore. Um SoundFont é um tipo especial de arquivo (extensão .sf2, ou .sf3 se comprimido) contendo amostras de som de um ou mais instrumentos musicais. Na prática, um sintetizador virtual que funciona como fonte sonora para arquivos MIDI. O MuseScore 4 vem com seu próprio soundfont nativo, MS Basic. Consulte o capítulo SoundFont.",
+            "variante": null,
+            "musescore_especifico": false
+        },
+        "Spatium (plural: Spatia) / Espaço / Espaço de pentagrama / sp. (abbr./unidade)": {
+            "definicao": "Uma unidade de medida, veja Conceitos de layout de página.",
+            "variante": null,
+            "musescore_especifico": false
+        },
+        "Pentagrama / Pentagramas": {
+            "definicao": "Veja Pentagrama (acima).",
+            "variante": "BE",
+            "musescore_especifico": false
+        },
+        "Espaço de pentagrama": {
+            "definicao": "Veja Spatium (acima).",
+            "variante": null,
+            "musescore_especifico": false
+        },
+        "Entrada passo a passo": {
+            "definicao": "Modo padrão de entrada de notas do MuseScore. Consulte o capítulo Inserindo notas e pausas.",
+            "variante": null,
+            "musescore_especifico": false
+        },
+        "Estilo": {
+            "definicao": "O perfil que contém configurações no MuseScore, em contraste com Propriedades. Consulte o capítulo Modelos e estilos.",
+            "variante": null,
+            "musescore_especifico": false
+        },
+        "Sistema": {
+            "definicao": "Conjunto de pentagramas a serem lidos simultaneamente em uma partitura. Consulte o capítulo Conceitos de layout de página. Veja também Sistema Operacional (SO).",
+            "variante": null,
+            "musescore_especifico": false
+        },
+        "Divisor de sistema": {
+            "definicao": "Separa sistemas na mesma página. Pode ser ativado para a partitura em Formato→Estilo→Sistema, veja o capítulo Formatação. Também disponível na paleta mestre, veja o capítulo Outros símbolos.",
+            "variante": null,
+            "musescore_especifico": false
+        }
+    },
+    "T": {
+        "Texto": {
+            "definicao": "Um objeto de Texto do MuseScore é um objeto que contém caracteres individuais que podem ser inseridos e removidos usando (digitando) o teclado do computador. Consulte o capítulo Inserindo e editando texto.",
+            "variante": null,
+            "musescore_especifico": false
+        },
+        "Ligadura": {
+            "definicao": "Uma linha curva entre duas notas adjacentes da mesma altura para indicar uma única nota de duração combinada. Consulte o capítulo Ligado. Um ligado não é uma ligadura.",
+            "variante": null,
+            "musescore_especifico": false
+        },
+        "Transposição": {
+            "definicao": "A ação de mover as alturas de uma ou mais notas para cima ou para baixo por um intervalo constante. Consulte o capítulo Transposição. Pode haver várias razões para transpor uma peça, por exemplo:",
+            "variante": null,
+            "musescore_especifico": false
+        },
+        "Tercina": {
+            "definicao": "Veja tupla.",
+            "variante": null,
+            "musescore_especifico": false
+        },
+        "Quiáltera": {
+            "definicao": "Uma tupla divide o valor da nota imediatamente superior por um número de notas diferente do indicado pela assinatura de compasso. Veja o capítulo Tupla. Por exemplo, um tríplice divide o valor da nota seguinte em três partes, ao invés de duas. As tuplas podem ser: tríplices, dúblicas, quíntuplas, entre outras.",
+            "variante": null,
+            "musescore_especifico": false
+        }
+    },
+    "U": {
+        "Antecompasso": {
+            "definicao": "Veja compasso de impulso.",
+            "variante": null,
+            "musescore_especifico": false
+        }
+    },
+    "V": {
+        "Intensidade:": {
+            "definicao": "Uma propriedade dos objetos dentro do MuseScore que controla o volume com que a(s) nota(s) são tocadas, veja o capítulo do manual do MuseScore 3 Loudness of a note. A propriedade de velocidade das notas é editada usando Painel de propriedades: aba Reprodução, veja o capítulo Painel de propriedades.",
+            "variante": null,
+            "musescore_especifico": false
+        },
+        "Voz": {
+            "definicao": "1. No MuseScore, voz é um recurso de software; você pode usar até 4 vozes por pentagrama, veja Trabalhando com múltiplas vozes, também veja pentagrama.",
+            "variante": null,
+            "musescore_especifico": false
+        },
+        "Chaves de Volta": {
+            "definicao": "Em uma seção repetida da música, é comum que os últimos compassos da seção sejam diferentes. Marcas chamadas voltas são usadas para indicar como a seção deve terminar a cada repetição. Essas marcas são frequentemente referidas simplesmente como terminações. Veja o capítulo Volta.",
+            "variante": null,
+            "musescore_especifico": false
+        }
+    },
+    "W": {
+        "Tonalidade escrita": {
+            "definicao": "Transposing instruments (such as the clarinet, French horn, trumpet etc.) are notated at a different pitch (and key signature) to how they sound. The notated pitch is called the written pitch. Contrast with concert pitch. See Staff / Part properties chapter.",
+            "variante": null,
+            "musescore_especifico": false
+        }
+    }
+}

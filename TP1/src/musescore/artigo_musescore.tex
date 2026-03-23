@@ -1,0 +1,280 @@
+\documentclass[a4paper,12pt]{article}
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage[portuguese]{babel}
+\usepackage{hyperref}
+
+\title{Glossário do MuseScore Studio}
+\author{Jéssica Cunha \\ SPLN 2025/26}
+\date{}
+
+\begin{document}
+\maketitle
+
+\begin{abstract}
+As três frases mais representativas do glossário, selecionadas com base
+num modelo de linguagem de bigramas com Laplace smoothing:
+
+\begin{itemize}
+  \item Sinal ((sustenido)) que indica que a altura de uma nota deve ser aumentada em um semitom, veja acidentais e armadura de clave.
+  \item Sinal ((bemol)) que indica que a altura de uma nota deve ser abaixada um semitom, veja acidentes e armadura de clave.
+  \item Modo padrão de entrada de notas do MuseScore. Consulte o capítulo Inserindo notas e pausas.
+\end{itemize}
+\end{abstract}
+
+\section{Fonte}
+Glossário recolhido de:
+\begin{itemize}
+  \item \url{https://handbook.musescore.org/pt_br/appendix/glossary}
+\end{itemize}
+
+\section{Corpo do Glossário}
+Definições extraídas do glossário do MuseScore Studio Handbook.
+As entidades nomeadas fiáveis estão anotadas inline com \textbf{negrito}
+e etiqueta \textsc{[tipo]}, identificadas com spaCy (\texttt{pt\_core\_news\_sm}).
+
+\subsection*{A}
+\textbf{Acicatura} --- Uma nota de graça que aparece como uma nota pequena com uma barra atravessando a haste. O \textbf{MuseScore}\textsc{[MISC]} cria uma reprodução rápida; a duração da reprodução não é afetada pela duração da nota mãe.
+
+\textbf{Acidente} --- Um acidente é um sinal que aparece à frente de uma nota e eleva ou abaixa sua altura. Veja Inserindo notas e pausas:Acidentes. O \textbf{MuseScore}\textsc{[MISC]} cria reprodução apenas para acidentes comuns, incluindo sustenidos, bemóis, naturais, dobros sustenidos, dobros bemóis e bemóis triplos. Para criar acidentes microtonais como o quarto de tom, veja Sistemas de afinação, notação microtonal e reprodução.
+
+\textbf{Ambitus} --- Extensão de notas (ou vocais) usada em uma pauta. Usada particularmente na música antiga. Veja o capítulo Ambitus.
+
+\textbf{Anacruse (BE)} --- Veja compasso de pickup.
+
+\textbf{Âncora} --- O ponto de ancoragem ao score de objetos como Texto e Linhas: quando o objeto é arrastado, a âncora aparece como um pequeno círculo marrom conectado ao objeto por uma linha pontilhada. Dependendo do objeto selecionado, a âncora pode estar ligada a (a) uma nota (ex.: digitação), (b) uma linha de pauta (ex.: texto da pauta), ou (c) uma barra de compasso (ex.: repetições).
+
+\textbf{Apojatura} --- Uma longa nota de graça que recebe valor da nota associada. O \textbf{MuseScore}\textsc{[MISC]} cria reprodução como tal. É aceitável executar a appogiatura escrita como acciaccatura hoje, mas o \textbf{MuseScore}\textsc{[MISC]} não cria tal reprodução. As funções da appogiatura incluem: nota de passagem, antecipação, suspensão batida e nota de escape.
+
+\textbf{Arpejo} --- An arpeggio tells the performer to break up the chord into the constituent notes, playing them separately and one after the other. The arrow arpeggio symbol indicates the direction in which the player should play the notes of the chord. See Arpeggios and glissandi chapter.
+
+\textbf{Articulação} --- Uma marcação ou símbolo que indica como uma nota deve ser tocada, geralmente alterando a duração da nota ou modelando seu ataque e decaimento. Veja Articulação.
+
+\subsection*{B}
+\textbf{Compasso (BE)} --- Veja compasso.
+
+\textbf{Barra de Compasso} --- Linha vertical que atravessa uma pauta, pautas ou um sistema completo, separando compassos. Veja Barline.
+
+\textbf{Barra de ligação} --- Notas com duração de uma colcheia ou menor possuem bandeirola ou uma haste agrupada (beam). As hastes são usadas para agrupar notas. Veja também Beam francês. Veja Beam.
+
+\textbf{PPM} --- Um BPM (batidas por minuto) que exibe apenas a unidade de tempo usada dentro da barra de ferramentas de reprodução do \textbf{MuseScore}\textsc{[MISC]}. O BPM representa a quantidade de semínimas que ocorreriam em um minuto. Não é o número usado em marcadores de metrônomo em uma partitura. Veja Controles de reprodução.
+
+\textbf{Breve, ou Brevis} --- Uma nota de dupla semibreve ou breve tem a duração de duas semibreves.
+
+\subsection*{C}
+\textbf{Cesura} --- Uma caesura (//) é uma pausa breve e silenciosa. O tempo não é contado durante esse período, e a música retoma quando o diretor sinaliza. Veja Respirações e pausas.
+
+\textbf{Capo (texto)} --- Um texto que indica a configuração do dispositivo transpositor usado em um instrumento. Veja Aplicando capos. Não confundir com Da capo (D.C.).
+
+\textbf{Cent} --- Um intervalo igual a um centésimo de um semitom, usado na propriedade de afinação de uma nota. Veja Painel de propriedades.
+
+\textbf{Acorde} --- 1. Um grupo de duas ou mais notas que soam simultaneamente.
+
+\textbf{Clave} --- Um símbolo musical usado para indicar quais notas são representadas pelas linhas e espaços em uma ->pauta. Veja Claves. Veja também clave de cortesia.
+
+\textbf{Coda} --- 1. Uma passagem que traz uma peça (ou movimento) ao final.
+
+\textbf{Tom de concerto} --- 1. A altura sonora (real) de uma nota --- em contraste com a altura escrita. Veja Trabalhando com instrumentos transpositores.
+
+\textbf{Clave de cortesia} --- Uma clave de tamanho reduzido aplicada ao final de um sistema indicando mudança de clave no início do próximo sistema. Veja Claves.
+
+\textbf{Notação entre pautas} --- Uma frase musical que se estende por duas pautas vizinhas, por exemplo, a pauta de baixo e a de violino.
+
+\textbf{Semínima (BE)} --- Veja colcheia.
+
+\subsection*{D}
+\textbf{Da capo (D.C.)} --- Uma diretriz para repetir a parte anterior da música. Veja Saltos e marcadores. Não confundir com capo (texto).
+
+\textbf{Nota morta} --- Veja nota fantasma.
+
+\textbf{Semi-colcheia (BE)} --- Uma semi-colcheia.
+
+\textbf{Dobrado bemol} --- Um bemol duplo ((duplo bemol) ou ?) indica que a altura de uma nota deve ser abaixada duas semitons.
+
+\textbf{Dobrado sustenido} --- Um sustenido duplo ((duplo sustenido) ou ?) indica que a altura de uma nota deve ser elevada duas semitons.
+
+\textbf{Duína} --- Veja grupo de valores irregulares (tuplet).
+
+\textbf{Dinâmica, dinâmicas, símbolo de dinâmica, símbolos de dinâmica} --- A symbol indicating the relative loudness of a note or phrase of music---such as mf (mezzoforte), p (piano), f (forte) etc., starting at that note. See Dynamic chapter.
+
+\subsection*{E}
+\textbf{Modo de edição, modo de edição de texto} --- Usado para editar a posição literal e o conteúdo de Texto, em contraste com o modo normal e o modo de inserção de notas. Veja Ajustando elementos diretamente e Inserindo e editando texto: Editando o conteúdo do objeto de texto.
+
+\textbf{Colcheia} --- Uma nota cuja duração é um oitavo de uma semibreve (whole note). Também conhecida como colcheia (BE).
+
+\textbf{Endecalineo $\star$} --- Endecalineo ou endecagrama, a pauta para Solfejo. Veja Solmisation (tutorial para o \textbf{MuseScore}\textsc{[MISC]} 3, aguardando atualização).
+
+\textbf{Finalizações} --- Veja volta.
+
+\textbf{Notas enarmônicas} --- Notas que soam na mesma altura, mas são escritas de forma diferente. Exemplo: G(sustenido) e A(bemol) são notas enarmônicas. Para mudar rapidamente entre grafias enarmônicas, pressione J. Veja Inserindo notas e pausas.
+
+\textbf{Explode $\star$} --- Um recurso que permite ao usuário dividir (ou explodir) os acordes em um trecho musical em uma única pauta em suas notas ou vozes constituintes. Veja Implodir e explodir. Veja também implode.
+
+\subsection*{F}
+\textbf{Bandeirola} --- Veja barra de agrupamento (beam).
+
+\textbf{Bemol} --- Sinal ((bemol)) que indica que a altura de uma nota deve ser abaixada um semitom, veja acidentes e armadura de clave.
+
+\textbf{French Beam $\star$} --- Barras onde as hastes só se estendem até a primeira barra, mas não intersectam toda a extensão. Para criar use o plugin Barras francesas.
+
+\subsection*{G}
+\textbf{Nota fantasma} --- Na música, especialmente no jazz, uma nota fantasma (ou nota morta, abafada, silenciada ou falsa) é uma nota musical com valor rítmico, mas sem altura discernível quando tocada. O \textbf{MuseScore}\textsc{[MISC]} oferece cabeças de nota cruzadas (cross notehead), cabeça de nota em diamante (pequena como no \textbf{MuseScore}\textsc{[MISC]} 3), cabeça de nota barra/diamante (nova no \textbf{MuseScore}\textsc{[MISC]} 4) e a adição de colchetes (parênteses) a uma nota, veja Cabeças de nota.
+
+\textbf{Nota de graça} --- Notas de graça aparecem como notas pequenas na frente de uma nota principal de tamanho normal. Veja acciaccatura e appoggiatura. Veja Nota de graça.
+
+\subsection*{H}
+\textbf{Mínima} --- Uma nota cuja duração é metade de uma semibreve. Também conhecida como mínima (BE).
+
+\textbf{Semi-fusa (BE)} --- Uma nota de sessenta e quatro avos.
+
+\subsection*{I}
+\textbf{Implode $\star$} --- Um recurso que permite ao usuário combinar vozes de pautas separadas em uma única pauta. Veja Implodir e explodir. Isso é similar, mas não exatamente, à redução de partitura (wikipedia). Veja também explode.
+
+\textbf{intervalo} --- A diferença de altura entre duas notas, expressa em termos do grau da escala (ex.: segunda maior, terça menor, quinta justa etc.). Veja Degree (Music) (\textbf{Wikipedia}\textsc{[MISC]}).
+
+\textbf{Interleaved $\star$} --- Um termo usado para descrever dois conjuntos de notas entrelaçados, opostamente embeamed. Para criar, use a função de voz e a paleta de barras. Veja Direções de barras intercaladas.
+
+\textbf{Instrumento} --- 1. Instrumento \textbf{MuseScore}\textsc{[MISC]}, veja Configurando sua partitura.
+
+\textbf{Irregular measure marker $\star$} --- Um sinal de mais ou menos no canto superior direito de um compasso indica que sua duração difere da estabelecida pela assinatura de tempo. Veja A interface do usuário e Propriedades de compasso.
+
+\subsection*{J}
+\textbf{Salto} --- Objetos de salto são notações como "D.S. al Coda", encontrados na paleta "Repetições \& Saltos". Veja Saltos e marcadores.
+
+\subsection*{K}
+\textbf{Armadura de Clave} --- Conjunto de sinais de sustenido ou sinais de bemol no início das pentagramas. Indica a tonalidade e evita a repetição desses sinais ao longo do pentagrama. Uma armadura de clave com Si bemol indica tonalidade de Fá maior ou Ré menor. Consulte o capítulo Armadura de clave.
+
+\subsection*{L}
+\textbf{Legato} --- Legato é um estilo de execução que consiste em tocar as notas de forma ligada. Legato pode ser escrito como texto ou indicado por meio do uso de ligaduras.
+
+\textbf{Armadura de compasso local} --- A armadura de compasso em um único pentagrama quando diferente da armadura de compasso geral da partitura. Veja Adicionar uma armadura de compasso local para um único pentagrama.
+
+\textbf{Longa} --- Um longa é uma nota inteira quádrupla.
+
+\subsection*{M}
+\textbf{Compasso (AE)} --- Um segmento de tempo definido por um número determinado de tempos. Dividir a música em compassos fornece pontos de referência regulares para localizar trechos dentro de uma obra musical. Equivalente a compasso (BE).
+
+\textbf{Símbolo de repetição de compasso} --- A measure repeat sign looks like a "percentage" symbol having the two circles filled, or a slash with a dot at each side. See Measure and multi-measure repeats chapter.
+
+\textbf{Marca de metrônomo} --- Um tipo de indicação de andamento. Veja Marcações de andamento.
+
+\textbf{Mínima (BE)} --- Veja mínima.
+
+\textbf{Pausa multicompasso} --- See Measure rests and multimeasure rests chapter.
+
+\subsection*{N}
+\textbf{Bequadro} --- Um bequadro ((sustenido)) é um símbolo que cancela uma alteração anterior nas notas da mesma altura, veja ->acidentais e ->armadura de clave.
+
+\textbf{Modo normal} --- O modo de operação do \textbf{MuseScore}\textsc{[MISC]} fora do modo de entrada de notas ou do modo de edição: pressione Esc para acessá-lo. No Modo Normal você pode navegar pela partitura, selecionar e mover elementos, ajustar as propriedades do Inspetor e alterar as alturas das notas existentes.
+
+\textbf{Modo de inserção de notas} --- O modo do programa usado para inserir notação musical, em contraste com o modo normal e o modo de edição. Ative-o pressionando N ou clicando no ícone de caneta na barra de ferramentas de entrada de notas. Consulte o capítulo Inserindo notas e pausas.
+
+\subsection*{O}
+\textbf{Sistema Operacional (SO)} --- Software subjacente que controla e gerencia o hardware e outros softwares em um computador. Sistemas operacionais populares são \textbf{Microsoft Windows}\textsc{[MISC]}, \textbf{macOS}\textsc{[MISC]} e \textbf{GNU/Linux}\textsc{[MISC]}.
+
+\textbf{Ossia $\star$} --- Uma passagem alternativa que pode ser tocada no lugar da passagem original (do italiano "alternativamente", significando "ou seja"). Consulte o capítulo Ossia.
+
+\subsection*{P}
+\textbf{Parte} --- 1. Função automática de extração de pentagramas do \textbf{MuseScore}\textsc{[MISC]}, veja Partes.
+
+\textbf{Compasso de impulso  ou Upbeat) (AE)} --- Compasso inicial incompleto de uma obra ou de uma seção da música. Consulte os capítulos Duração do compasso, Criar nova partitura: Compasso de impulso e Propriedades do compasso: Excluir da contagem de compassos. Pode ou não ser compensado no final da partitura ou seção.
+
+\textbf{Propriedades} --- 1. Configurações de um objeto individual em uma partitura no \textbf{MuseScore}\textsc{[MISC]}, em contraste com estilo (perfil).
+
+\subsection*{Q}
+\textbf{Quartina} --- Veja tupla.
+
+\textbf{Semínima} --- Uma nota cuja duração é um quarto de uma nota inteira (semibreve). Equivalente a uma colcheia (BE).
+
+\textbf{Colcheia (BE)} --- Veja colcheia.
+
+\textbf{Quintina} --- Veja tupla.
+
+\subsection*{R}
+\textbf{Renomear alturas} --- Altera o acidente usado em uma nota, mas mantém a altura da nota. Veja o capítulo Inserindo notas e pausas: Accidentais.
+
+\textbf{Pausa} --- Um símbolo musical que indica silêncio. Veja o capítulo Inserindo notas e pausas.
+
+\textbf{Modo Redefinir Altura} --- Um dos modos de inserção de notas. Métodos alternativos de inserção de notas: Modo Redefinir Altura
+
+\subsection*{S}
+\textbf{Partitura} --- 1. Nos fóruns de suporte do \textbf{MuseScore}\textsc{[MISC]} e no Manual do \textbf{MuseScore}\textsc{[MISC]}, partitura geralmente se refere a um arquivo de computador com a extensão .mscz -- e à sua representação visual na tela do computador, bem como à reprodução de áudio.
+
+\textbf{Seção} --- No \textbf{MuseScore}\textsc{[MISC]}, uma região da partitura entre quebras de seção; também do início da partitura até a primeira quebra de seção, e da última quebra de seção até o final da partitura.
+
+\textbf{Segno} --- Um marcador de navegação. Consulte o capítulo Saltos e marcadores.
+
+\textbf{Semibreve (BE)} --- Uma nota inteira (AE). Dura um compasso inteiro em tempo 4/4.
+
+\textbf{Semicolcheia (BE)} --- Uma semicolcheia.
+
+\textbf{Semihemidemisemicolcheia (BE)} --- Uma nota de cento e vinte e oito avos.
+
+\textbf{Sextina} --- Veja tupla.
+
+\textbf{SF2} --- Um formato de instrumento virtual desenvolvido pela \textbf{E-mu Systems}\textsc{[ORG]} e \textbf{Creative Labs}\textsc{[PER]}. Veja SoundFonts.
+
+\textbf{SF3} --- Uma invenção de \textbf{Werner Schweer}\textsc{[PER]}, desenvolvedor do \textbf{MuseScore}\textsc{[MISC]} (fonte). Este formato suporta compressão de amostras de som. Veja SoundFonts.
+
+\textbf{Cabeça de nota compartilhada} --- Uma única cabeça de nota com duas hastes---uma para cima, outra para baixo. Muito comum em música para guitarra, por exemplo. Consulte Cabeças de nota.
+
+\textbf{Sustenido} --- Sinal ((sustenido)) que indica que a altura de uma nota deve ser aumentada em um semitom, veja acidentais e armadura de clave.
+
+\textbf{Barra (acorde slash, cabeça de nota slash)} --- Indica rasgueado. Veja acorde slash (\textbf{Wikipedia}\textsc{[MISC]}).
+
+\textbf{Notação slash} --- Uma forma de notação musical que utiliza marcas de barra colocadas no pentagrama ou acima/abaixo dele para indicar o ritmo de um acompanhamento: frequentemente encontrada em associação com símbolos de acordes. Existem dois tipos: (1) Notação slash consiste em uma barra rítmica em cada tempo: a interpretação exata fica a cargo do intérprete (veja Preencher com barras); (2) Notação de barra rítmica indica o ritmo preciso para o acompanhamento (veja Alternar notação de barra rítmica).
+
+\textbf{Legato} --- A curved line over or under two or more notes, meaning that the notes will be played smooth and connected (legato). See Slur chapter. A slur is not a tie.
+
+\textbf{Solfejo} --- veja Endecalineo
+
+\textbf{SoundFont} --- Um formato de instrumento virtual suportado pelo \textbf{MuseScore}\textsc{[MISC]}. Um SoundFont é um tipo especial de arquivo (extensão .sf2, ou .sf3 se comprimido) contendo amostras de som de um ou mais instrumentos musicais. Na prática, um sintetizador virtual que funciona como fonte sonora para arquivos \textbf{MIDI}\textsc{[MISC]}. O \textbf{MuseScore}\textsc{[MISC]} 4 vem com seu próprio soundfont nativo, \textbf{MS Basic}\textsc{[MISC]}. Consulte o capítulo SoundFont.
+
+\textbf{Spatium (plural: Spatia) / Espaço / Espaço de pentagrama / sp. (abbr./unidade)} --- Uma unidade de medida, veja Conceitos de layout de página.
+
+\textbf{Pentagrama / Pentagramas (BE)} --- Veja Pentagrama (acima).
+
+\textbf{Espaço de pentagrama} --- Veja Spatium (acima).
+
+\textbf{Entrada passo a passo} --- Modo padrão de entrada de notas do \textbf{MuseScore}\textsc{[MISC]}. Consulte o capítulo Inserindo notas e pausas.
+
+\textbf{Estilo} --- O perfil que contém configurações no \textbf{MuseScore}\textsc{[MISC]}, em contraste com Propriedades. Consulte o capítulo Modelos e estilos.
+
+\textbf{Sistema} --- Conjunto de pentagramas a serem lidos simultaneamente em uma partitura. Consulte o capítulo Conceitos de layout de página. Veja também Sistema Operacional (SO).
+
+\textbf{Divisor de sistema} --- Separa sistemas na mesma página. Pode ser ativado para a partitura em Formato->Estilo->Sistema, veja o capítulo Formatação. Também disponível na paleta mestre, veja o capítulo Outros símbolos.
+
+\subsection*{T}
+\textbf{Texto} --- Um objeto de Texto do \textbf{MuseScore}\textsc{[MISC]} é um objeto que contém caracteres individuais que podem ser inseridos e removidos usando (digitando) o teclado do computador. Consulte o capítulo Inserindo e editando texto.
+
+\textbf{Ligadura} --- Uma linha curva entre duas notas adjacentes da mesma altura para indicar uma única nota de duração combinada. Consulte o capítulo Ligado. Um ligado não é uma ligadura.
+
+\textbf{Transposição} --- A ação de mover as alturas de uma ou mais notas para cima ou para baixo por um intervalo constante. Consulte o capítulo Transposição. Pode haver várias razões para transpor uma peça, por exemplo:
+
+\textbf{Tercina} --- Veja tupla.
+
+\textbf{Quiáltera} --- Uma tupla divide o valor da nota imediatamente superior por um número de notas diferente do indicado pela assinatura de compasso. Veja o capítulo Tupla. Por exemplo, um tríplice divide o valor da nota seguinte em três partes, ao invés de duas. As tuplas podem ser: tríplices, dúblicas, quíntuplas, entre outras.
+
+\subsection*{U}
+\textbf{Antecompasso} --- Veja compasso de impulso.
+
+\subsection*{V}
+\textbf{Intensidade:} --- Uma propriedade dos objetos dentro do \textbf{MuseScore}\textsc{[MISC]} que controla o volume com que a(s) nota(s) são tocadas, veja o capítulo do manual do \textbf{MuseScore}\textsc{[MISC]} 3 Loudness of a note. A propriedade de velocidade das notas é editada usando Painel de propriedades: aba Reprodução, veja o capítulo Painel de propriedades.
+
+\textbf{Voz} --- 1. No \textbf{MuseScore}\textsc{[MISC]}, voz é um recurso de software; você pode usar até 4 vozes por pentagrama, veja Trabalhando com múltiplas vozes, também veja pentagrama.
+
+\textbf{Chaves de Volta} --- Em uma seção repetida da música, é comum que os últimos compassos da seção sejam diferentes. Marcas chamadas voltas são usadas para indicar como a seção deve terminar a cada repetição. Essas marcas são frequentemente referidas simplesmente como terminações. Veja o capítulo Volta.
+
+\subsection*{W}
+\textbf{Tonalidade escrita} --- Transposing instruments (such as the clarinet, French horn, trumpet etc.) are notated at a different pitch (and key signature) to how they sound. The notated pitch is called the written pitch. Contrast with concert pitch. See Staff / Part properties chapter.
+
+
+\begin{thebibliography}{1}
+\bibitem{musescore}
+MuseScore Studio Handbook.
+\textit{Glossário}.
+Disponível em: \url{https://handbook.musescore.org/pt_br/appendix/glossary}.
+Acedido em: março de 2026.
+\end{thebibliography}
+
+\end{document}
