@@ -8,13 +8,11 @@ import spacy
 def nfc(texto):
     return unicodedata.normalize('NFC', texto)
 
-# ── Carregar dados ────────────────────────────────────────────────────────────
 with open("manual_teoria_musical.json", encoding="utf-8") as f:
     artigo = json.load(f)
 
 artigo = {nfc(k): [nfc(p) for p in v] for k, v in artigo.items()}
 
-# ── Extrair frases e construir corpus ────────────────────────────────────────
 frases = []
 for seccao in artigo:
     for paragrafo in artigo[seccao]:
@@ -35,7 +33,6 @@ for frase in frases:
         frases_tokenizadas.append((frase, tokens))
         corpus.extend(tokens)
 
-# ── Modelo de bigramas ───────────────────────────────────────────────────────
 def build_ngrams(tokens, n):
     return Counter(tuple(tokens[i:i+n]) for i in range(len(tokens) - n + 1))
 
@@ -58,7 +55,6 @@ frases_scored = sorted(
 )
 top3 = [frase for _, frase in frases_scored[:3]]
 
-# ── NER com spaCy ────────────────────────────────────────────────────────────
 nlp = spacy.load("pt_core_news_sm")
 texto_completo = "\n".join(p for seccao in artigo for p in artigo[seccao])
 doc = nlp(texto_completo)
@@ -67,12 +63,13 @@ def is_valida(ent):
     texto = ent.text.strip()
     if len(texto) <= 2:
         return False
+    if texto.isupper():        
+        return False
     if len(texto.split()) > 5:
         return False
     ruido = {'veja', 'ver', 'exemplo', 'nota', 'tipo', 'forma'}
     return texto.lower().split()[0] not in ruido
 
-# ── Escape LaTeX ─────────────────────────────────────────────────────────────
 def latex_escape(texto):
     subs = {'\u2013': '--', '\u2014': '---', '\u2018': "'", '\u2019': "'",
             '\u201c': '"', '\u201d': '"'}
@@ -81,23 +78,34 @@ def latex_escape(texto):
     texto = ''.join(c if ord(c) <= 0x00FF else '?' for c in texto)
     for char, rep in [('\\', r'\textbackslash{}'), ('&', r'\&'), ('%', r'\%'),
                       ('$', r'\$'), ('#', r'\#'), ('_', r'\_'),
-                      ('{', r'\{'), ('}', r'\}')]:
+                      ('{', r'\{'), ('}', r'\}'),
+                      ('~', r'\textasciitilde{}'), 
+                      ('^', r'\^{}')]:             
         texto = texto.replace(char, rep)
     return texto
 
-# ── Anotar entidades no texto ────────────────────────────────────────────────
 def anotar_entidades(texto, ents):
     vistas = {}
     for e in ents:
         if is_valida(e) and e.text not in vistas:
             vistas[e.text] = e.label_
-    for nome, label in sorted(vistas.items(), key=lambda x: len(x[0]), reverse=True):
+
+    entidades = sorted(vistas.items(), key=lambda x: len(x[0]), reverse=True)
+
+    placeholders = {}
+    for i, (nome, label) in enumerate(entidades):
         nome_esc = latex_escape(nome)
-        marcado = f"\\textbf{{{nome_esc}}}\\textsc{{[{label}]}}"
-        texto = texto.replace(nome_esc, marcado)
+        if nome_esc not in texto:
+            continue
+        ph = f"PLCHLDR{i:04d}PLCHLDR"
+        texto = texto.replace(nome_esc, ph)
+        placeholders[ph] = f"\\textbf{{{nome_esc}}}\\textsc{{[{label}]}}"
+
+    for ph, markup in placeholders.items():
+        texto = texto.replace(ph, markup)
+
     return texto
 
-# ── Gerar LaTeX ───────────────────────────────────────────────────────────────
 latex = r"""\documentclass[a4paper,12pt]{article}
 \usepackage[T1]{fontenc}
 \usepackage[utf8]{inputenc}

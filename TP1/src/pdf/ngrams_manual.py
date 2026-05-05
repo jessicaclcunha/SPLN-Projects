@@ -6,7 +6,6 @@ from math import log
 with open("manual_teoria_musical.json", encoding="utf-8") as f:
     artigo = json.load(f)
 
-# Extrair frases de todos os parágrafos
 frases = []
 for seccao in artigo:
     for paragrafo in artigo[seccao]:
@@ -16,7 +15,6 @@ for seccao in artigo:
 
 print(f"Total de frases: {len(frases)}")
 
-# Tokenização
 def tokenizar(texto):
     texto = texto.lower()
     texto = re.sub(r"[^\wÀ-ú\s]", " ", texto)
@@ -34,25 +32,21 @@ V = len(set(corpus))
 N = len(corpus)
 print(f"Tokens: {N}  |  Vocabulário: {V}")
 
-# Construção dos n-gramas
 def build_ngrams(tokens, n):
     return Counter(tuple(tokens[i:i+n]) for i in range(len(tokens) - n + 1))
 
 uni = build_ngrams(corpus, 1)
 bi  = build_ngrams(corpus, 2)
 
-# Probabilidade bigrama com Laplace smoothing
 def p2(w1, w2):
     return (bi.get((w1, w2), 0) + 1) / (uni.get((w1,), 0) + V)
 
-# Score de uma frase (log-prob média dos bigramas)
 def score_frase(tokens):
     if len(tokens) < 8:
         return float('-inf')
     score = sum(log(p2(tokens[i], tokens[i+1])) for i in range(len(tokens) - 1))
     return score / (len(tokens) - 1)
 
-# Ordenar frases por score
 frases_scored = sorted(
     [(score_frase(tokens), frase) for frase, tokens in frases_tokenizadas],
     reverse=True

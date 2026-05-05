@@ -7,7 +7,6 @@ nlp = spacy.load("pt_core_news_sm")
 with open("manual_teoria_musical.json", encoding="utf-8") as f:
     artigo = json.load(f)
 
-# Construir texto completo
 texto_completo = ""
 for seccao in artigo:
     for paragrafo in artigo[seccao]:
@@ -17,10 +16,11 @@ print(f"Texto total: {len(texto_completo)} caracteres")
 
 doc = nlp(texto_completo)
 
-# Filtrar entidades com ruído
 def is_valida(ent):
     texto = ent.text.strip()
     if len(texto) <= 2:
+        return False
+    if texto.isupper():      
         return False
     if len(texto.split()) > 5:
         return False

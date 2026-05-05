@@ -9,11 +9,9 @@ def nfc(texto):
     """Normalizar para NFC — garante chars compostos (ç em vez de c+cedilha)."""
     return unicodedata.normalize('NFC', texto)
 
-# ─── 1. Carregar glossário ───────────────────────────────────────────────────
 with open("musescore_glossario.json", encoding="utf-8") as f:
     glossario_raw = json.load(f)
 
-# normalizar todos os textos para NFC
 glossario = {}
 for letra in glossario_raw:
     glossario[nfc(letra)] = {}
@@ -25,7 +23,6 @@ for letra in glossario_raw:
             "musescore_especifico": entrada["musescore_especifico"]
         }
 
-# ─── 2. Extrair frases e tokenizar ──────────────────────────────────────────
 def limpar(texto):
     texto = texto.lower()
     texto = re.sub(r"[^\wÀ-ú\s]", " ", texto)
@@ -50,7 +47,6 @@ for frase in frases:
         frases_tokenizadas.append((frase, tokens))
         corpus.extend(tokens)
 
-# ─── 3. Modelo de n-gramas ───────────────────────────────────────────────────
 def build_ngrams(tokens, n):
     return Counter(tuple(tokens[i:i+n]) for i in range(len(tokens) - n + 1))
 
@@ -68,29 +64,31 @@ def score_frase(tokens):
     score = sum(log(p2(tokens[i], tokens[i+1])) for i in range(len(tokens) - 1))
     return score / (len(tokens) - 1)
 
-# ─── 4. Top 3 frases ────────────────────────────────────────────────────────
 frases_scored = sorted(
     [(score_frase(tokens), frase) for frase, tokens in frases_tokenizadas],
     reverse=True
 )
 top3 = [frase for _, frase in frases_scored[:3]]
 
-# ─── 5. NER ─────────────────────────────────────────────────────────────────
 nlp = spacy.load("pt_core_news_sm")
 
 texto_completo = "\n".join(frases)
 doc = nlp(texto_completo)
 
-# entidades fiáveis identificadas manualmente (ver ner_musescore.py)
-confiaveis = {
-    "MuseScore", "Werner Schweer", "E-mu Systems",
-    "Creative Labs", "Microsoft Windows", "macOS", "GNU/Linux",
-    "Wikipedia", "MIDI", "MS Basic"
-}
+def is_valida(ent):
+    texto = ent.text.strip()
+    if len(texto) <= 2:
+        return False
+    if texto.isupper():
+        return False
+    if len(texto.split()) > 5:
+        return False
+    ruido = {'veja', 'consulte', 'inserindo', 'indica', 'altera',
+             'usado', 'trabalhando', 'ligado', 'criar', 'preencher',
+             'excluir', 'implodir', 'contrast', 'see', 'meaning'}
+    return texto.lower().split()[0] not in ruido
 
-# ─── 6. Escapar caracteres especiais do LaTeX ───────────────────────────────
 def latex_escape(texto):
-    # 1. substituir chars Unicode problemáticos ANTES de qualquer escape LaTeX
     substituicoes = {
         '\u2011': '-',
         '\u2013': '--',
@@ -108,11 +106,8 @@ def latex_escape(texto):
     }
     for s, rep in substituicoes.items():
         texto = texto.replace(s, rep)
-    # 2. remover qualquer outro char Unicode > U+00FF restante
     texto = ''.join(c if ord(c) <= 0x00FF else '?' for c in texto)
-    # 3. escapar \ primeiro
     texto = texto.replace('\\', r'\textbackslash{}')
-    # 4. restantes caracteres especiais do LaTeX
     texto = texto.replace('&', r'\&')
     texto = texto.replace('%', r'\%')
     texto = texto.replace('$', r'\$')
@@ -124,26 +119,27 @@ def latex_escape(texto):
     texto = texto.replace('^', r'\^{}')
     return texto
 
-# ─── 7. Anotar entidades inline no texto ────────────────────────────────────
 def anotar_entidades(texto, ents):
-    """Anota entidades fiáveis inline: \textbf{entidade}\textsc{[TIPO]}
-    Deduplica entidades (uma entrada por nome) e substitui todas as
-    ocorrências no texto de uma só vez."""
-    # deduplicar: só uma entrada por texto de entidade
     vistas = {}
     for e in ents:
-        if e.text in confiaveis and e.text not in vistas:
+        if is_valida(e) and e.text not in vistas:
             vistas[e.text] = e.label_
-    # ordenar por comprimento desc para evitar substituições parciais
-    # ex: "E-mu Systems" antes de "Systems"
-    for nome, label in sorted(vistas.items(), key=lambda x: len(x[0]), reverse=True):
-        nome_escaped = latex_escape(nome)
-        marcado = f"\\textbf{{{nome_escaped}}}\\textsc{{[{label}]}}"
-        texto = texto.replace(nome_escaped, marcado)
-    return texto
 
-# ─── 8. Gerar o artigo LaTeX ─────────────────────────────────────────────────
-# Estilo: construir string com f-strings, igual ao aula5.py
+    entidades = sorted(vistas.items(), key=lambda x: len(x[0]), reverse=True)
+
+    placeholders = {}
+    for i, (nome, label) in enumerate(entidades):
+        nome_esc = latex_escape(nome)
+        if nome_esc not in texto:
+            continue
+        ph = f"PLCHLDR{i:04d}PLCHLDR"
+        texto = texto.replace(nome_esc, ph)
+        placeholders[ph] = f"\\textbf{{{nome_esc}}}\\textsc{{[{label}]}}"
+
+    for ph, markup in placeholders.items():
+        texto = texto.replace(ph, markup)
+
+    return texto
 
 latex = r"""\documentclass[a4paper,12pt]{article}
 \usepackage[T1]{fontenc}
@@ -179,12 +175,11 @@ Glossário recolhido de:
 
 \section{Corpo do Glossário}
 Definições extraídas do glossário do MuseScore Studio Handbook.
-As entidades nomeadas fiáveis estão anotadas inline com \textbf{negrito}
+As entidades nomeadas estão anotadas inline com \textbf{negrito}
 e etiqueta \textsc{[tipo]}, identificadas com spaCy (\texttt{pt\_core\_news\_sm}).
 
 """
 
-# corpo: todas as definições organizadas por letra, com entidades anotadas inline
 for letra in glossario:
     latex += f"\\subsection*{{{latex_escape(letra)}}}\n"
     for termo in glossario[letra]:
@@ -200,9 +195,8 @@ for letra in glossario:
 
         latex += f"\\textbf{{{label}}}"
         if definicao:
-            # escapar primeiro, depois anotar entidades
-            definicao_escaped  = latex_escape(definicao)
-            definicao_anotada  = anotar_entidades(definicao_escaped, doc.ents)
+            definicao_escaped = latex_escape(definicao)
+            definicao_anotada = anotar_entidades(definicao_escaped, doc.ents)
             latex += f" --- {definicao_anotada}"
         latex += "\n\n"
 
@@ -218,7 +212,6 @@ Acedido em: março de 2026.
 \end{document}
 """
 
-# ─── 9. Guardar ──────────────────────────────────────────────────────────────
 with open("artigo_musescore.tex", "w", encoding="utf-8") as f:
     f.write(latex)
 

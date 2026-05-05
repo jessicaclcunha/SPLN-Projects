@@ -1,8 +1,6 @@
 import re
 import json
 
-# Ler o ficheiro de texto gerado pelo pdftotext
-# Comando a correr antes: pdftotext manual_teoria_musical.pdf
 with open("manual_teoria_musical.txt", encoding="utf-8") as f:
     texto = f.read()
 
@@ -35,7 +33,6 @@ for linha in texto.split("\n"):
                 paragrafos.append(texto_paragrafo)
             paragrafo_atual = []
 
-# Último parágrafo pendente
 if paragrafo_atual:
     texto_paragrafo = " ".join(paragrafo_atual)
     if len(texto_paragrafo) > 30 and "." in texto_paragrafo:
